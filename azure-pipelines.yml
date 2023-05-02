@@ -15,6 +15,9 @@ variables:
   dotnetSdkVersion: '6.x'
 
 steps:
+  - script: lsb_release -a
+    displayName: 'Log Ubuntu Version'
+
   - task: UseDotNet@2
     displayName: 'Use .NET SDK $(dotnetSdkVersion)'
     inputs:
